@@ -6,6 +6,8 @@ def Createmonitor():
     url = input("What is the linkanitakuy of the new monitor \n")
     record = [name, url]
     return record
+
+#should probably work on somewhere to save these maybe another py program with lists 
 #get the variables name and website
 
 #name = 'anitaku'
