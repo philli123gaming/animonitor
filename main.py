@@ -3,18 +3,23 @@
 #ask the user to choose which website they want to store
 def Createmonitor():
     name = input("What would you like to name your new monitor \n")
-    url = input("What is the linkanitakuy of the new monitor \n")
+    url = input("What is the link of the new monitor \n")
     record = [name, url]
     return record
 
-#should probably work on somewhere to save these maybe another py program with lists 
+#should probably work on somewhere to save these maybe another py program with lists
+def Save_Data():
+    with open('SavedData.txt', 'w+') as Saved_Data:
+        Saved_Data.write(Createmonitor())
+        return 'record added successfully'
+
 #get the variables name and website
 
 #name = 'anitaku'
 #url = 'https://anitaku.to/home.html'
 #record = [name, url]
 
-print(Createmonitor())
+print(Save_Data())
 #check if the website is ok and for any redirects so i wont need to constantly upload url
 #use webscaper to grab the entire html of the page to store locally
 #once the page receives new content
